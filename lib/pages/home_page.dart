@@ -53,14 +53,14 @@ class _HomePageState extends State<HomePage> {
             child: Row(
               children: [
                 Text('I want to ', style: TextStyle(fontSize: 32),),
-                Text('Eat', style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, decoration: TextDecoration.underline),),
+                Text('Duolingo', style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold, decoration: TextDecoration.underline),),
               ],
             ),
           ),
           //Tap Bar
           TabBar(tabs: myTabs),
           //Tap Bar view
-          const Expanded(
+          Expanded(
             child: TabBarView(children: [
               //Donut Tap
               DonutTab(),
