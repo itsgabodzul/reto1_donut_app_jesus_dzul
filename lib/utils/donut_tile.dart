@@ -49,24 +49,44 @@ class DonutTile extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 12),
         child: Image.asset(imageName),),
       //Donut flavor text
-      Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-        child: Text(donutFlavor,
-        style: TextStyle(
-          fontWeight: FontWeight.bold,
-          fontSize: 18,
-          color: Colors.black 
-        ))),
-      Padding( 
-        padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 2),
-        child: const Text("Dunki",
-        style: TextStyle(
-          fontWeight: FontWeight.normal,
-          fontSize: 14,
-          color: Colors.grey
-        ),
-        ))
+          Text(
+      donutFlavor,
+      style: const TextStyle(
+        fontWeight: FontWeight.bold,
+        fontSize: 18,
+        color: Colors.black,
+      ),
+    ),
+    const Text(
+      "Dunki's",
+      style: TextStyle(
+        fontWeight: FontWeight.normal,
+        fontSize: 14,
+        color: Colors.grey,
+      ),
+    ),
       //Love icon + add button
+      const Spacer(),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 2),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    // Heart icon
+                    IconButton(
+                      icon: const Icon(Icons.favorite_border),
+                      color: Colors.pink[400],
+                      onPressed: () {
+                        // Lógica para marcar como favorito
+                      },
+                    ),
+                    // Add button
+                    const Text('Add', style: TextStyle(fontWeight: FontWeight.bold,
+                    decoration: TextDecoration.underline,
+                      color: Colors.grey))
+                  ],
+                ),
+              ),
       ],
     ),
   ),
